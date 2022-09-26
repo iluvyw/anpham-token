@@ -5,7 +5,7 @@ const { BigNumber } = require("ethers");
 describe("My Token", function () {
   let myToken;
   let MyToken;
-  let totalSupply = BigNumber.from(1000000000000000);
+  let totalSupply = BigNumber.from(1000 * 10 ** 10);
 
   beforeEach(async function () {
     MyToken = await ethers.getContractFactory("MyToken");
@@ -31,7 +31,7 @@ describe("My Token", function () {
   // Check if token's decimals equal to 18 (default of ERC20)
   it("Token's decimals", async function () {
     const decimals = await myToken.decimals();
-    expect(decimals).to.equal(18);
+    expect(decimals).to.equal(10);
   });
 
   // Check transfer from deployer to first account

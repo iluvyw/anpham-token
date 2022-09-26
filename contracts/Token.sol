@@ -9,4 +9,9 @@ contract MyToken is ERC20 {
     constructor(string memory _name, string memory _symbol ,uint256 _totalSupply) ERC20(_name, _symbol) {
         _mint(msg.sender, _totalSupply);
     }
+
+
+    function decimals() public pure override returns (uint8) {
+		return 10;
+	}
 }
