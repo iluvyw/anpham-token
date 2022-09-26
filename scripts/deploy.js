@@ -4,7 +4,7 @@ const { BigNumber } = require("ethers");
 async function main() {
   const [deployer] = await ethers.getSigners();
 
-  const totalSupply = BigNumber.from(1000 * 10 ** 10);
+  const totalSupply = BigNumber.from(2408 * 10 ** 10);
 
   console.log("Deploying contracts with the account:", deployer.address);
 
